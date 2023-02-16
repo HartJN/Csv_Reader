@@ -9,6 +9,7 @@ var HtmlReport = /** @class */ (function () {
     function HtmlReport() {
     }
     HtmlReport.prototype.print = function (report) {
+        console.log(report);
         var html = "\n      <div>\n      <h1>Analysis Output</h1>\n      <div>".concat(report, "</div>\n      </div>\n      ");
         fs_1.default.writeFileSync('report.html', html);
     };
